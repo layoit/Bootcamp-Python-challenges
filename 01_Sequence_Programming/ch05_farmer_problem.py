@@ -37,22 +37,10 @@ def farmer_problem():
     
     print(f"a. Overall sales achieved by Mahesh from 80 acres: Rs. {overall_sales:,.2f}")
     
-    # b. Sales realisation from chemical-free farming at the end of 11 months
-    # Timeline:
-    # 0-6 months: Vegetables (Tomato, Potato, Cabbage) converted? 
-    #   Prompt says: "Mahesh starts with the conversion of vegetables... He spends the first 6 months doing the same."
-    #   "Sales realisation from chemical-free farming at the end of 11 months"
-    #   Assumption: Crops harvested AFTER conversion are 'chemical-free'.
-    #   If conversion finishes at month 6, and he gets yield "in one crop cycle", we assume the yield mentioned IS from that cycle.
-    #   If the cycle finishes within the 11 months and is after conversion, it counts.
-    #   However, the prompt is slightly ambiguous on WHEN the yield happens relative to conversion. 
-    #   But typically, "realisation ... at the end of 11 months" implies what has successfully completed conversion.
-    #   Veg (6 months) -> Converted.
-    #   Sunflower (6 + 4 = 10 months) -> Converted.
-    #   Sugarcane (10 + 4 = 14 months) -> NOT Converted by month 11.
     
     chemical_free_sales = tomato_sales + potato_sales + cabbage_sales + sunflower_sales
     print(f"b. Sales realisation from chemical-free farming at the end of 11 months: Rs. {chemical_free_sales:,.2f}")
 
 if __name__ == "__main__":
     farmer_problem()
+
